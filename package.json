@@ -1,12 +1,18 @@
 {
-  "name": "node-ts-template",
+  "name": "atlas",
   "version": "0.1.0",
+  "description": "Learning platform: LLM primitives, retrieval, evals, production patterns.",
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "tsc",
-    "test": "npm run build && node --test"
+    "test": "npm run build && node --test test/",
+    "exp:01": "npm run build && node dist/experiments/01-sampling.js"
   },
   "devDependencies": {
+    "@types/node": "^22.0.0",
     "typescript": "^5.0.0"
   }
 }
