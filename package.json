@@ -1,0 +1,12 @@
+{
+  "name": "node-ts-template",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
