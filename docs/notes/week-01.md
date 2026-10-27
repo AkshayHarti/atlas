@@ -61,18 +61,26 @@ attributable to temperature rather than luck.
 
 ## Results
 
-Run date: _pending_ · Model: `qwen3:8b` · Results: `experiments/01-sampling/results/latest.md`
+Run date: 2026-10-27 · Model: `qwen3:8b` · 80 calls, 0 failures · Results: `experiments/01-sampling/results/latest.md`
 
-| T | distinct / 20 | most-common share | predicted distinct | delta |
-|---|---|---|---|---|
-| 0 | | | | |
-| 0.3 | | | | |
-| 0.7 | | | | |
-| 1.0 | | | | |
+| T | distinct / 20 | most-common share | predicted distinct | predicted share | delta (distinct) |
+|---|---|---|---|---|---|
+| 0 | 1 | 1.00 | 1 | 1.00 | 0 |
+| 0.3 | 2 | 0.95 | 3 | 0.70 | −1 |
+| 0.7 | 11 | 0.40 | 7 | 0.35 | **+4** |
+| 1.0 | 13 | 0.20 | 12 | 0.20 | +1 |
+
+Shape: 1 → 2 → 11 → 13. Not a curve — a step. Between 0.3 and 0.7 the
+distinct count multiplies by ~5 while the most-common share falls from 0.95 to
+0.40. At 0.3, nineteen of twenty answers were the same sentence.
 
 ## What I got wrong
 
 _Write the one prediction that was most wrong and what assumption caused it._
+
+Prompt to answer: my guess was wrong about **where** the change happens, not
+about **how much** variety exists at the ends. What model of sampling would
+have predicted a cliff at 0.3–0.7 instead of a smooth ramp?
 
 ## Publish (Sunday, ≤45 min)
 
