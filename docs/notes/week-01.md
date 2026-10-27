@@ -33,10 +33,10 @@ calibration signal; being vague is not.
 
 | T | distinct / 20 (predicted) | most-common share (predicted) |
 |---|---|---|
-| 0 | | |
-| 0.3 | | |
-| 0.7 | | |
-| 1.0 | | |
+| 0 | 1 | 1.00 |
+| 0.3 | 3 | 0.70 |
+| 0.7 | 7 | 0.35 |
+| 1.0 | 12 | 0.20 |
 
 1. Does distinct-count grow linearly with `T`, or saturate? Where is the knee?
 2. At `T = 0`, how many distinct outputs? Why might it not be exactly 1?
