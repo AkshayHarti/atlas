@@ -1,3 +1,9 @@
+---
+week: 1
+status: in-progress
+published:            # paste the URL when the Sunday note is live — the dashboard derives "shipped" from this line
+---
+
 # Week 01 — sampling, temperature, and why "more temperature" is the wrong model
 
 ## Concept
